@@ -11,7 +11,7 @@ agents::agents()
 {
 
 }
-agents::agents(QString CIN,QString nom,QString prenom,QString date_naissance,QString email,QString tel)
+agents::agents(QString CIN,QString nom,QString prenom,QString date_naissance,QString email,QString tel,QString profil)
  {
      this->CIN=CIN;
      this->nom=nom;
@@ -19,6 +19,7 @@ agents::agents(QString CIN,QString nom,QString prenom,QString date_naissance,QSt
      this->date_naissance=date_naissance;
      this->email=email;
      this->tel=tel;
+
  }
 QString agents::get_nom(){return nom;}
 QString agents::get_prenom(){return prenom;}
@@ -26,6 +27,7 @@ QString agents::get_CIN(){return CIN;}
 QString agents::get_tel(){return tel;}
 QString agents::get_email(){return email;}
 QString agents::get_date(){return date_naissance;}
+QString agents::get_profil(){return profil;}
 
 
 void agents::getData(int ID)
@@ -64,17 +66,19 @@ void agents::setData(QSqlQuery query)
     this->email = query.value(diplomeNo).toString();
     this->tel = query.value(anneeNo).toInt();
 }
-bool agents::ajouter(QString CIN, QString nom, QString prenom, QString date_naissance, QString email, QString tel)//--------------ajouter------//
+bool agents::ajouter(QString CIN, QString nom, QString prenom, QString date_naissance, QString email, QString tel,QString profil)//--------------ajouter------//
 {
     QSqlQuery query;
-    query.prepare("INSERT INTO agents (CIN, NOM, PRENOM,Date_naissance,email,tel) "
-                        "VALUES (:CIN,:nom,:prenom,:Date_naissance,:email,:tel)");
+    query.prepare("INSERT INTO agents (CIN, NOM, PRENOM,Date_naissance,email,tel,profil) "
+                        "VALUES (:CIN,:nom,:prenom,:Date_naissance,:email,:tel,:profil)");
     query.bindValue(":CIN",CIN);
     query.bindValue(":nom",nom);
     query.bindValue(":prenom",prenom);
     query.bindValue(":Date_naissance",date_naissance);
     query.bindValue(":email",email);
     query.bindValue(":tel",tel);
+    query.bindValue(":profil",profil);
+
     return    query.exec();
 }
 void agents::afficher1(Ui::MainWindow *ui)//--------------afficher------//
@@ -184,9 +188,10 @@ bool agents::modifier1(Ui::MainWindow *ui)
    QString Date_naissance=ui->date_m->text();
    QString email =ui->email_m->text();
     QString tel =ui->tel_m->text();
-   agents A(CIN, nom, prenom,Date_naissance,email,tel);
+    QString profil=ui->comboBox->currentText();
+   agents A(CIN, nom, prenom,Date_naissance,email,tel,profil);
    QSqlQuery query;
-   query.prepare ("update agents set cin ='"+CIN+"', nom ='"+nom+"',prenom ='"+prenom+"', date_naissance ='"+Date_naissance+"',email ='"+email+"', tel ='"+tel+"'where cin ='"+CIN+"'");
+   query.prepare ("update agents set cin ='"+CIN+"', nom ='"+nom+"',prenom ='"+prenom+"', date_naissance ='"+Date_naissance+"',email ='"+email+"', tel ='"+tel+"',profil='"+profil+"' where cin ='"+CIN+"'");
    return  (query.exec());
 
 }
@@ -229,5 +234,20 @@ QSqlQueryModel * agents::afficher_choix1(QString choix)//trier
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("DATE_NAISSANCE"));
     model->setHeaderData(4, Qt::Horizontal, QObject::tr("EMAIL"));
     model->setHeaderData(5, Qt::Horizontal, QObject::tr("TEL"));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("PROFIL"));
+
     return model;
+}
+int agents::calculercatego(QString catego){
+   QSqlQuery query;
+   query.prepare("select * from agents where profil='"+catego+"'");
+   query.bindValue(":profil",catego);
+   query.exec();
+   int total=0;
+   while(query.next()){
+       total++;
+   }
+
+
+   return total;
 }

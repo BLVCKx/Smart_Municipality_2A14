@@ -1601,7 +1601,7 @@ QTabBar::tab:!selected {
                      <enum>QTabWidget::Rounded</enum>
                     </property>
                     <property name="currentIndex">
-                     <number>1</number>
+                     <number>0</number>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -2309,7 +2309,7 @@ QTabBar::tab:!selected {
 }</string>
                     </property>
                     <property name="currentIndex">
-                     <number>1</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="tab">
                      <attribute name="title">
@@ -2376,7 +2376,7 @@ QLabel
                       <widget class="QPushButton" name="pushButton_10">
                        <property name="geometry">
                         <rect>
-                         <x>170</x>
+                         <x>80</x>
                          <y>530</y>
                          <width>201</width>
                          <height>20</height>
@@ -2479,7 +2479,7 @@ QPushButton:pressed {
                       <widget class="QPushButton" name="pushButton_14">
                        <property name="geometry">
                         <rect>
-                         <x>450</x>
+                         <x>610</x>
                          <y>530</y>
                          <width>201</width>
                          <height>20</height>
@@ -2602,6 +2602,39 @@ QComboBox QAbstractItemView {
                          <string>tel</string>
                         </property>
                        </item>
+                      </widget>
+                      <widget class="QPushButton" name="pushButton_20">
+                       <property name="geometry">
+                        <rect>
+                         <x>360</x>
+                         <y>530</y>
+                         <width>201</width>
+                         <height>20</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	border: 2px solid rgb(52, 59, 72);
+	font: 9pt &quot;Segoe UI&quot;;
+	border-radius: 5px;	
+	background-color: rgb(52, 59, 72);
+}
+QPushButton:hover {
+	background-color: rgb(57, 65, 80);
+	border: 2px solid rgb(61, 70, 86);
+background-image: url(:/16x16/icons/16x16/cil-chart.png);
+	background-position: right center;
+    background-repeat: no-repeat;
+}
+QPushButton:pressed {	
+	background-color: rgb(35, 40, 49);
+	border: 2px solid rgb(43, 50, 61);
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Statistique</string>
+                       </property>
                       </widget>
                      </widget>
                     </widget>
@@ -3651,24 +3684,7 @@ QLineEdit:focus {
                     </widget>
                    </widget>
                   </widget>
-                  <widget class="QWidget" name="Statistique">
-                   <widget class="QFrame" name="frame_7">
-                    <property name="geometry">
-                     <rect>
-                      <x>0</x>
-                      <y>0</y>
-                      <width>951</width>
-                      <height>651</height>
-                     </rect>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                   </widget>
-                  </widget>
+                  <widget class="QWidget" name="Statistique"/>
                  </widget>
                 </item>
                </layout>

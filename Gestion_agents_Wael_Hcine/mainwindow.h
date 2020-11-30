@@ -77,6 +77,8 @@ void on_pushButton_9_clicked();
 
     void on_pushButton_21_clicked();
 
+    void on_pushButton_20_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

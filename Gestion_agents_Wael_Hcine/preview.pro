@@ -1,5 +1,7 @@
 QT       += core gui sql
 QT       += core gui printsupport
+QT       +=multimedia
+QT       +=charts
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -20,16 +22,19 @@ SOURCES += \
     conn.cpp \
     main.cpp \
     mainwindow.cpp \
-    profil.cpp
+    profil.cpp \
+    statistiques.cpp
 
 HEADERS += \
     agents.h \
     conn.h \
     mainwindow.h \
-    profil.h
+    profil.h \
+    statistiques.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    statistiques.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

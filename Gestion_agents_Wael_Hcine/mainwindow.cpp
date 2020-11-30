@@ -37,6 +37,8 @@
 #include<QtSql/QSqlQuery>
 #include<QVariant>
 #include"profil.h"
+#include "statistiques.h"
+#include "ui_statistiques.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -104,9 +106,10 @@ void MainWindow::on_ajouter_0_clicked()
     QString Date_naissance=ui->date_0->text();
     QString email =ui->email_0->text();
     QString tel =ui->tel_0->text();
-  agents A(QString CIN,QString nom,QString prenom,QString Date_naissance,QString email,QString tel);
+    QString profil=ui->comboBox->currentText();
+  agents A(QString CIN,QString nom,QString prenom,QString Date_naissance,QString email,QString tel,QString profil);
   agents A1;
-   bool test=A1.ajouter(CIN,nom,prenom, Date_naissance ,email,tel);
+   bool test=A1.ajouter(CIN,nom,prenom, Date_naissance ,email,tel,profil);
   if(test)
 {
 QMessageBox::information(nullptr, QObject::tr("Ajouter un employe"),
@@ -191,6 +194,7 @@ void MainWindow::on_tab_agents_activated(const QModelIndex &index)
             ui->date_m->setText(qry.value(3).toString());
             ui->email_m->setText(qry.value(4).toString());
             ui->tel_m->setText(qry.value(5).toString());
+            ui->comboBox_2->setEditText(qry.value(6).toString());
         }
     }
     ui->stackedWidget->setCurrentIndex(3);
@@ -488,4 +492,10 @@ void MainWindow::on_pushButton_21_clicked()
         else {
             QMessageBox ::information(this,"","erreur")  ;
         }
+}
+
+void MainWindow::on_pushButton_20_clicked()
+{
+    statistiques *s=new statistiques();
+    s->show();
 }
