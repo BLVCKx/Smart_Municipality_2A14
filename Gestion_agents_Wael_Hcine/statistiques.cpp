@@ -10,7 +10,9 @@ statistiques::statistiques(QWidget *parent) :
     ui->setupUi(this);
 
     agents m;
+
     QBarSet *set1=new QBarSet("nombre des agents");
+
 
     *set1 <<m.calculercatego("service")<<m.calculercatego("parking")<<m.calculercatego("maintenance");
     QBarSeries *series=new QBarSeries();

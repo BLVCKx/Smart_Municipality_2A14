@@ -46,6 +46,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     agents A;
      A.afficher1(ui);
+     A.departentss(ui);
+     ui->modifier->hide();
+     ui->Statistque->hide();
 }
 
 MainWindow::~MainWindow()
@@ -55,13 +58,15 @@ MainWindow::~MainWindow()
 
 
 void MainWindow::on_home_clicked()
-{   agents A;
+{
     ui->stackedWidget->setCurrentIndex(0);
+    agents A;
      A.afficher1(ui);
+     A.departentss(ui);
      profil P;
      P.afficher_P(ui);//----------afficher-----//
      ui->modifier->hide();
-     ui->Statistque->hide();
+     ui->Statistque->hide(); 
 }
 
 void MainWindow::on_ajouter_2_clicked()
@@ -69,13 +74,20 @@ void MainWindow::on_ajouter_2_clicked()
     ui->stackedWidget->setCurrentIndex(1);
     ui->modifier->hide();
     ui->Statistque->hide();
+    agents A;
+     A.afficher1(ui);
+     A.departentss(ui);
+     profil P;
+     P.afficher_P(ui);
    }
 
 void MainWindow::on_afficher_2_clicked()
 {
-    agents A;
+
     ui->stackedWidget->setCurrentIndex(2);
+    agents A;
      A.afficher1(ui);
+     A.departentss(ui);
      profil P;
      P.afficher_P(ui);//----------afficher-----//
      ui->modifier->hide();
@@ -103,19 +115,23 @@ void MainWindow::on_ajouter_0_clicked()
     QString CIN = ui->CIN_1->text();
     QString nom= ui->nom_1->text();
     QString prenom= ui->prenom_0->text();
-    QString Date_naissance=ui->date_0->text();
+    QDate Date_naissance=ui->date_0->date();
     QString email =ui->email_0->text();
     QString tel =ui->tel_0->text();
-    QString profil=ui->comboBox->currentText();
-  agents A(QString CIN,QString nom,QString prenom,QString Date_naissance,QString email,QString tel,QString profil);
+    QString nom_profil=ui->comboBox->currentText();
+  agents A(QString CIN,QString nom,QString prenom,QDate Date_naissance,QString email,QString tel,QString nom_profil);
   agents A1;
-   bool test=A1.ajouter(CIN,nom,prenom, Date_naissance ,email,tel,profil);
+   bool test=A1.ajouter(CIN,nom,prenom,Date_naissance,email,tel,nom_profil);
   if(test)
 {
 QMessageBox::information(nullptr, QObject::tr("Ajouter un employe"),
                   QObject::tr("employe ajouté.\n"
                               "Click Cancel to exit."),QMessageBox::Cancel);
-A1.afficher1(ui);
+agents A;
+ A.afficher1(ui);
+ A.departentss(ui);
+ profil P;
+ P.afficher_P(ui);
 
 }
 
@@ -132,6 +148,7 @@ A1.afficher1(ui);
  ui->date_0->clear();
  ui->email_0->clear();
  ui->tel_0->clear();
+
 }
 
 
@@ -169,7 +186,11 @@ void MainWindow::on_pushButton_13_clicked()
         {
             QMessageBox ::information(this,"","Employe Supprimé")  ;
 
+
             e.afficher1(ui);
+             e.departentss(ui);
+             profil P;
+             P.afficher_P(ui);
 
         }
         else {
@@ -191,7 +212,7 @@ void MainWindow::on_tab_agents_activated(const QModelIndex &index)
             ui->CIN_m->setText(qry.value(0).toString());
             ui->nom_m->setText(qry.value(1).toString());
             ui->prenom_m->setText(qry.value(2).toString());
-            ui->date_m->setText(qry.value(3).toString());
+            ui->date_m->setDate(qry.value(3).toDate());
             ui->email_m->setText(qry.value(4).toString());
             ui->tel_m->setText(qry.value(5).toString());
             ui->comboBox_2->setEditText(qry.value(6).toString());
@@ -211,16 +232,23 @@ void MainWindow::on_pushButton_12_clicked()
         {
             QMessageBox ::information(this,"","Employe modifiee")  ;
 
-            e.afficher1(ui);
+             e.afficher1(ui);
+             e.departentss(ui);
+             profil P;
+             P.afficher_P(ui);
 
         }
          ui->stackedWidget->setCurrentIndex(2);//retour afficher
+          ui->modifier->hide();
 }
 //----------actualiser-----//
 void MainWindow::on_pushButton_15_clicked()
 {
     agents A;
-    A.afficher1(ui);
+     A.afficher1(ui);
+     A.departentss(ui);
+     profil P;
+     P.afficher_P(ui);
 }
 //----------imprimer-------//
 void MainWindow::on_pushButton_10_clicked()
@@ -326,8 +354,11 @@ QMessageBox::information(nullptr, QObject::tr("Ajouter profil"),
                 QObject::tr("profil ajouté.\n"
                             "Click Cancel to exit."),QMessageBox::Cancel);
 
-profil P;
-P.afficher_P(ui);//----------afficher-----//
+agents A;
+ A.afficher1(ui);
+ A.departentss(ui);
+ profil P;
+ P.afficher_P(ui);
 }
 
 else
@@ -440,8 +471,12 @@ void MainWindow::on_pdf_clicked()
 //------actualiser profil-----//
 void MainWindow::on_actualiser_clicked()
 {
-    profil P;
-    P.afficher_P(ui);
+
+    agents A;
+     A.afficher1(ui);
+     A.departentss(ui);
+     profil P;
+     P.afficher_P(ui);
 }
 //------modifier profil-----//
 void MainWindow::on_tab_profil_activated(const QModelIndex &index)
@@ -462,6 +497,7 @@ void MainWindow::on_tab_profil_activated(const QModelIndex &index)
         }
     }
     ui->stackedWidget->setCurrentIndex(3);
+     ui->modifier->show();
 }
 
 void MainWindow::on_modifier_profil_clicked()
@@ -474,8 +510,10 @@ void MainWindow::on_modifier_profil_clicked()
 
             P.afficher_P(ui);
 
+
         }
  ui->stackedWidget->setCurrentIndex(2);
+ ui->modifier->hide();
 }
 //------supprimer profil-----//
 void MainWindow::on_pushButton_21_clicked()

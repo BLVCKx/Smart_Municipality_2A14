@@ -1511,7 +1511,7 @@ QPushButton:pressed {
                    <string notr="true">background: transparent;</string>
                   </property>
                   <property name="currentIndex">
-                   <number>4</number>
+                   <number>2</number>
                   </property>
                   <widget class="QWidget" name="page_home">
                    <widget class="QLabel" name="label">
@@ -1803,30 +1803,6 @@ QLineEdit:focus {
 }</string>
                       </property>
                      </widget>
-                     <widget class="QLineEdit" name="date_0">
-                      <property name="geometry">
-                       <rect>
-                        <x>280</x>
-                        <y>210</y>
-                        <width>241</width>
-                        <height>20</height>
-                       </rect>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QLineEdit {
-	background-color: rgb(27, 29, 35);
-	border-radius: 5px;
-	border: 2px solid rgb(27, 29, 35);
-	padding-left: 10px;
-}
-QLineEdit:hover {
-	border: 2px solid rgb(64, 71, 88);
-}
-QLineEdit:focus {
-	border: 2px solid rgb(91, 101, 124);
-}</string>
-                      </property>
-                     </widget>
                      <widget class="QLineEdit" name="email_0">
                       <property name="geometry">
                        <rect>
@@ -1904,21 +1880,6 @@ QComboBox QAbstractItemView {
 	selection-background-color: rgb(39, 44, 54);
 }</string>
                       </property>
-                      <item>
-                       <property name="text">
-                        <string>service</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>parking</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>maintenance</string>
-                       </property>
-                      </item>
                      </widget>
                      <widget class="QPushButton" name="ajouter_0">
                       <property name="geometry">
@@ -1968,6 +1929,30 @@ QPushButton:pressed {
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
+                      <widget class="QDateEdit" name="date_0">
+                       <property name="geometry">
+                        <rect>
+                         <x>280</x>
+                         <y>200</y>
+                         <width>241</width>
+                         <height>22</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QDateEdit {
+	background-color: rgb(27, 29, 35);
+	border-radius: 5px;
+	border: 2px solid rgb(27, 29, 35);
+	padding-left: 10px;
+}
+QDateEdit:hover {
+	border: 2px solid rgb(64, 71, 88);
+}
+QDateEdit:focus {
+	border: 2px solid rgb(91, 101, 124);
+}</string>
+                       </property>
+                      </widget>
                      </widget>
                      <zorder>frame</zorder>
                      <zorder>label_2</zorder>
@@ -1980,7 +1965,6 @@ QPushButton:pressed {
                      <zorder>CIN_1</zorder>
                      <zorder>nom_1</zorder>
                      <zorder>prenom_0</zorder>
-                     <zorder>date_0</zorder>
                      <zorder>email_0</zorder>
                      <zorder>tel_0</zorder>
                      <zorder>comboBox</zorder>
@@ -2309,7 +2293,7 @@ QTabBar::tab:!selected {
 }</string>
                     </property>
                     <property name="currentIndex">
-                     <number>0</number>
+                     <number>1</number>
                     </property>
                     <widget class="QWidget" name="tab">
                      <attribute name="title">
@@ -2474,6 +2458,37 @@ QPushButton:pressed {
                          <width>871</width>
                          <height>381</height>
                         </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QTableView {	
+	background-color: rgb(39, 44, 54);
+	padding: 10px;
+	border-radius: 5px;
+	gridline-color: rgb(44, 49, 60);
+	border-bottom: 1px solid rgb(44, 49, 60);
+}
+QHeaderView::section {
+	color: rgb(255, 255, 255);
+	border: 2px solid rgb(52, 59, 72);
+	font: 9pt &quot;Segoe UI&quot;;
+	border-radius: 5px;	
+	background-color: rgb(52, 59, 72);}
+
+QScrollBar:horizontal {
+    border: none;
+    background: rgb(52, 59, 72);
+    height: 14px;
+    margin: 0px 21px 0 21px;
+	border-radius: 0px;
+}
+ QScrollBar:vertical {
+	border: none;
+    background: rgb(52, 59, 72);
+    width: 14px;
+    margin: 21px 0 21px 0;
+	border-radius: 0px;
+ }
+</string>
                        </property>
                       </widget>
                       <widget class="QPushButton" name="pushButton_14">
@@ -2700,76 +2715,6 @@ QLabel
                         <string>Chercher</string>
                        </property>
                       </widget>
-                      <widget class="QPushButton" name="pushButton_18">
-                       <property name="geometry">
-                        <rect>
-                         <x>660</x>
-                         <y>230</y>
-                         <width>201</width>
-                         <height>20</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">QPushButton {
-	color: rgb(255, 255, 255);
-	border: 2px solid rgb(52, 59, 72);
-	font: 9pt &quot;Segoe UI&quot;;
-	border-radius: 5px;	
-	background-color: rgb(52, 59, 72);
-
-}
-QPushButton:hover {
-	background-color: rgb(57, 65, 80);
-	border: 2px solid rgb(61, 70, 86);
-background-image: url(:/16x16/icons/16x16/cil-equalizer.png);
-background-position: right;
-background-repeat: no-reperat;
-}
-QPushButton:pressed {	
-	background-color: rgb(35, 40, 49);
-	border: 2px solid rgb(43, 50, 61);
-background-image: url(C:/Users/JoKerTn/Documents/final/icons/24x24/cil-home.png);
-background-position: right;
-background-repeat: no-reperat;
-}</string>
-                       </property>
-                       <property name="text">
-                        <string>Modifier</string>
-                       </property>
-                      </widget>
-                      <widget class="QPushButton" name="pushButton_19">
-                       <property name="geometry">
-                        <rect>
-                         <x>660</x>
-                         <y>330</y>
-                         <width>201</width>
-                         <height>20</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">QPushButton {
-	color: rgb(255, 255, 255);
-	border: 2px solid rgb(52, 59, 72);
-	font: 9pt &quot;Segoe UI&quot;;
-	border-radius: 5px;	
-	background-color: rgb(52, 59, 72);
-}
-QPushButton:hover {
-	background-color: rgb(57, 65, 80);
-	border: 2px solid rgb(61, 70, 86);
-background-image: url(:/16x16/icons/16x16/cil-chart.png);
-	background-position: right center;
-    background-repeat: no-repeat;
-}
-QPushButton:pressed {	
-	background-color: rgb(35, 40, 49);
-	border: 2px solid rgb(43, 50, 61);
-}</string>
-                       </property>
-                       <property name="text">
-                        <string>Statistique</string>
-                       </property>
-                      </widget>
                       <widget class="QPushButton" name="pushButton_21">
                        <property name="geometry">
                         <rect>
@@ -2808,6 +2753,35 @@ QPushButton:pressed {
                          <width>631</width>
                          <height>321</height>
                         </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QTableView {	
+	background-color: rgb(39, 44, 54);
+	padding: 10px;
+	border-radius: 5px;
+	gridline-color: rgb(44, 49, 60);
+	border-bottom: 1px solid rgb(44, 49, 60);
+}
+QHeaderView::section {
+	color: rgb(255, 255, 255);
+	border: 2px solid rgb(52, 59, 72);
+	font: 9pt &quot;Segoe UI&quot;;
+	border-radius: 5px;	
+	background-color: rgb(52, 59, 72);}
+QScrollBar:horizontal {
+    border: none;
+    background: rgb(52, 59, 72);
+    height: 14px;
+    margin: 0px 21px 0 21px;
+	border-radius: 0px;
+}
+ QScrollBar:vertical {
+	border: none;
+    background: rgb(52, 59, 72);
+    width: 14px;
+    margin: 21px 0 21px 0;
+	border-radius: 0px;
+ }</string>
                        </property>
                       </widget>
                       <widget class="QCheckBox" name="check_ID">
@@ -3051,7 +3025,7 @@ QTabBar::tab:!selected {
 </string>
                     </property>
                     <property name="currentIndex">
-                     <number>1</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="tab_3">
                      <attribute name="title">
@@ -3134,60 +3108,6 @@ QComboBox QAbstractItemView {
 	background-color: rgb(27, 29, 35);
 	padding: 10px;
 	selection-background-color: rgb(39, 44, 54);
-}</string>
-                       </property>
-                       <item>
-                        <property name="text">
-                         <string>service</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>New Item</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>New Item</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>New Item</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>New Item</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>New Item</string>
-                        </property>
-                       </item>
-                      </widget>
-                      <widget class="QLineEdit" name="date_m">
-                       <property name="geometry">
-                        <rect>
-                         <x>320</x>
-                         <y>220</y>
-                         <width>241</width>
-                         <height>20</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">QLineEdit {
-	background-color: rgb(27, 29, 35);
-	border-radius: 5px;
-	border: 2px solid rgb(27, 29, 35);
-	padding-left: 10px;
-}
-QLineEdit:hover {
-	border: 2px solid rgb(64, 71, 88);
-}
-QLineEdit:focus {
-	border: 2px solid rgb(91, 101, 124);
 }</string>
                        </property>
                       </widget>
@@ -3419,6 +3339,30 @@ QLineEdit:focus {
                        </property>
                        <property name="text">
                         <string>Profil</string>
+                       </property>
+                      </widget>
+                      <widget class="QDateEdit" name="date_m">
+                       <property name="geometry">
+                        <rect>
+                         <x>320</x>
+                         <y>220</y>
+                         <width>221</width>
+                         <height>22</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QDateEdit {
+	background-color: rgb(27, 29, 35);
+	border-radius: 5px;
+	border: 2px solid rgb(27, 29, 35);
+	padding-left: 10px;
+}
+QDateEdit:hover {
+	border: 2px solid rgb(64, 71, 88);
+}
+QDateEdit:focus {
+	border: 2px solid rgb(91, 101, 124);
+}</string>
                        </property>
                       </widget>
                      </widget>
