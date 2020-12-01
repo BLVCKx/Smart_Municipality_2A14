@@ -1511,7 +1511,7 @@ QPushButton:pressed {
                    <string notr="true">background: transparent;</string>
                   </property>
                   <property name="currentIndex">
-                   <number>2</number>
+                   <number>4</number>
                   </property>
                   <widget class="QWidget" name="page_home">
                    <widget class="QLabel" name="label">
@@ -3684,7 +3684,18 @@ QLineEdit:focus {
                     </widget>
                    </widget>
                   </widget>
-                  <widget class="QWidget" name="Statistique"/>
+                  <widget class="QWidget" name="Statistique">
+                   <widget class="QWidget" name="centralwidget_2" native="true">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>951</width>
+                      <height>601</height>
+                     </rect>
+                    </property>
+                   </widget>
+                  </widget>
                  </widget>
                 </item>
                </layout>

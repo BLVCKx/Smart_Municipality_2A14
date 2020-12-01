@@ -1,5 +1,7 @@
 #include "statistiques.h"
 #include "ui_statistiques.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 #include"agents.h"
 statistiques::statistiques(QWidget *parent) :
     QMainWindow(parent),
@@ -8,7 +10,7 @@ statistiques::statistiques(QWidget *parent) :
     ui->setupUi(this);
 
     agents m;
-    QBarSet *set1=new QBarSet("1");
+    QBarSet *set1=new QBarSet("nombre des agents");
 
     *set1 <<m.calculercatego("service")<<m.calculercatego("parking")<<m.calculercatego("maintenance");
     QBarSeries *series=new QBarSeries();
@@ -24,8 +26,6 @@ statistiques::statistiques(QWidget *parent) :
     axis->append(categories);
     chart->createDefaultAxes();
     chart->setAxisX(axis,series);
-
-
     QChartView *chartview=new QChartView(chart);
 
     this->setCentralWidget(chartview);
