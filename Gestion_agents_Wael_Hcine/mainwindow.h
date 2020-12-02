@@ -79,6 +79,52 @@ void on_pushButton_9_clicked();
 
     void on_pushButton_20_clicked();
 
+    void on_CIN_1_cursorPositionChanged(int arg1, int arg2);
+
+    void on_nom_1_cursorPositionChanged(int arg1, int arg2);
+
+    void on_prenom_0_cursorPositionChanged(int arg1, int arg2);
+
+    void on_email_0_cursorPositionChanged(int arg1, int arg2);
+
+    void on_tel_0_cursorPositionChanged(int arg1, int arg2);
+
+    void on_date_0_userDateChanged(const QDate &date);
+
+    void on_date_0_dateChanged(const QDate &date);
+
+    void on_CIN_m_cursorPositionChanged(int arg1, int arg2);
+
+    void on_nom_m_cursorPositionChanged(int arg1, int arg2);
+
+    void on_prenom_m_cursorPositionChanged(int arg1, int arg2);
+
+    void on_date_m_dateChanged(const QDate &date);
+
+    void on_email_m_cursorPositionChanged(int arg1, int arg2);
+
+    void on_tel_m_cursorPositionChanged(int arg1, int arg2);
+
+    void on_ID_0_cursorPositionChanged(int arg1, int arg2);
+
+    void on_nom_profil_0_cursorPositionChanged(int arg1, int arg2);
+
+    void on_salaire_0_cursorPositionChanged(int arg1, int arg2);
+
+    void on_description_0_cursorPositionChanged(int arg1, int arg2);
+
+    void on_nb_0_cursorPositionChanged(int arg1, int arg2);
+
+    void on_IDp_m_cursorPositionChanged(int arg1, int arg2);
+
+    void on_nomp_m_cursorPositionChanged(int arg1, int arg2);
+
+    void on_salairep_m_cursorPositionChanged(int arg1, int arg2);
+
+    void on_descriptionp_m_cursorPositionChanged(int arg1, int arg2);
+
+    void on_nbagentsp_m_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::MainWindow *ui;
 };

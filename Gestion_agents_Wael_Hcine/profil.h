@@ -33,5 +33,16 @@ public:
     QSqlQueryModel *afficher_choix_p(QString choix);
     bool modifier_p(Ui::MainWindow *ui);
     bool supprimer_p(Ui::MainWindow *ui);
+    bool verifID(Ui::MainWindow *ui);
+    bool verifnom_profil(Ui::MainWindow *ui);
+    bool verifsalaire(Ui::MainWindow *ui);
+    bool verifdescription(Ui::MainWindow *ui);
+    bool verifnb_agents(Ui::MainWindow *ui);
+    bool verifIDm(Ui::MainWindow *ui);
+    bool verifnom_profilm(Ui::MainWindow *ui);
+    bool verifsalairem(Ui::MainWindow *ui);
+    bool verifdescriptionm(Ui::MainWindow *ui);
+    bool verifnb_agentsm(Ui::MainWindow *ui);
+    void InitIndication(Ui::MainWindow *ui);
 };
 #endif // PROFIL_H

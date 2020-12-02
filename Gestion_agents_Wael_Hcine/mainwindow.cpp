@@ -63,8 +63,10 @@ void MainWindow::on_home_clicked()
     agents A;
      A.afficher1(ui);
      A.departentss(ui);
+     A.InitIndication(ui);
      profil P;
      P.afficher_P(ui);//----------afficher-----//
+     P.InitIndication(ui);
      ui->modifier->hide();
      ui->Statistque->hide(); 
 }
@@ -77,8 +79,11 @@ void MainWindow::on_ajouter_2_clicked()
     agents A;
      A.afficher1(ui);
      A.departentss(ui);
+
      profil P;
      P.afficher_P(ui);
+     P.InitIndication(ui);
+     A.InitIndication(ui);
    }
 
 void MainWindow::on_afficher_2_clicked()
@@ -90,6 +95,8 @@ void MainWindow::on_afficher_2_clicked()
      A.departentss(ui);
      profil P;
      P.afficher_P(ui);//----------afficher-----//
+     P.InitIndication(ui);
+     A.InitIndication(ui);
      ui->modifier->hide();
      ui->Statistque->hide();
 }
@@ -122,7 +129,7 @@ void MainWindow::on_ajouter_0_clicked()
   agents A(QString CIN,QString nom,QString prenom,QDate Date_naissance,QString email,QString tel,QString nom_profil);
   agents A1;
    bool test=A1.ajouter(CIN,nom,prenom,Date_naissance,email,tel,nom_profil);
-  if(test)
+  if(test && A1.verifCIN(ui) && A1.verifnom(ui)&&A1.verifprenom(ui)&& A1.VerifMail(ui)&&A1.verifTel(ui)&&A1.verifdate(ui))
 {
 QMessageBox::information(nullptr, QObject::tr("Ajouter un employe"),
                   QObject::tr("employe ajouté.\n"
@@ -219,6 +226,7 @@ void MainWindow::on_tab_agents_activated(const QModelIndex &index)
         }
     }
     ui->stackedWidget->setCurrentIndex(3);
+     ui->tabWidget_3->setCurrentIndex(0);
     ui->modifier->show();
 
 
@@ -228,7 +236,7 @@ void MainWindow::on_pushButton_12_clicked()
 {
     agents e;
 
-        if(e.modifier1(ui))
+        if(e.modifier1(ui)&& e.verifCIN_m(ui) && e.verifnom_m(ui)&&e.verifprenom_m(ui)&&e.VerifMail_m(ui)&&e.verifTel_m(ui)&&e.verifdate_m(ui))
         {
             QMessageBox ::information(this,"","Employe modifiee")  ;
 
@@ -348,7 +356,7 @@ void MainWindow::on_ajouter_profil_clicked()
 profil P(QString ID,QString nom_profil,QString salaire,QString description ,QString nb_agents);
 profil p1;
 bool test=p1.ajouter_p(ID,nom_profil,salaire,description,nb_agents);
-if(test)
+if(test && p1.verifID(ui)&& p1.verifnom_profil(ui)&& p1.verifsalaire(ui)&& p1.verifdescription(ui)&& p1.verifnb_agents(ui))
 {
 QMessageBox::information(nullptr, QObject::tr("Ajouter profil"),
                 QObject::tr("profil ajouté.\n"
@@ -497,6 +505,7 @@ void MainWindow::on_tab_profil_activated(const QModelIndex &index)
         }
     }
     ui->stackedWidget->setCurrentIndex(3);
+     ui->tabWidget_3->setCurrentIndex(1);
      ui->modifier->show();
 }
 
@@ -504,7 +513,7 @@ void MainWindow::on_modifier_profil_clicked()
 {
     profil P;
 
-        if(P.modifier_p(ui))
+        if(P.modifier_p(ui)&& P.verifIDm(ui)&& P.verifnom_profilm(ui)&& P.verifsalairem(ui)&& P.verifdescriptionm(ui)&& P.verifnb_agentsm(ui))
         {
             QMessageBox ::information(this,"","Profil modifiee")  ;
 
@@ -513,6 +522,7 @@ void MainWindow::on_modifier_profil_clicked()
 
         }
  ui->stackedWidget->setCurrentIndex(2);
+
  ui->modifier->hide();
 }
 //------supprimer profil-----//
@@ -536,4 +546,136 @@ void MainWindow::on_pushButton_20_clicked()
 {
     statistiques *s=new statistiques();
     s->show();
+}
+//--------verfifaction line agnets--------//
+void MainWindow::on_CIN_1_cursorPositionChanged(int arg1, int arg2)
+{agents A;
+    A.verifCIN(ui);
+}
+
+void MainWindow::on_nom_1_cursorPositionChanged(int arg1, int arg2)
+{agents A;
+    A.verifnom(ui);
+
+}
+
+void MainWindow::on_prenom_0_cursorPositionChanged(int arg1, int arg2)
+{
+    agents A;
+        A.verifprenom(ui);
+}
+
+void MainWindow::on_email_0_cursorPositionChanged(int arg1, int arg2)
+{
+    agents A;
+        A.VerifMail(ui);
+}
+
+void MainWindow::on_tel_0_cursorPositionChanged(int arg1, int arg2)
+{
+    agents A;
+        A.verifTel(ui);
+}
+
+void MainWindow::on_date_0_dateChanged(const QDate &date)
+{
+    agents A;
+        A.verifdate(ui);
+}
+
+void MainWindow::on_CIN_m_cursorPositionChanged(int arg1, int arg2)
+{
+    agents A;
+        A.verifCIN_m(ui);
+}
+
+void MainWindow::on_nom_m_cursorPositionChanged(int arg1, int arg2)
+{
+    agents A;
+        A.verifnom_m(ui);
+}
+
+void MainWindow::on_prenom_m_cursorPositionChanged(int arg1, int arg2)
+{
+    agents A;
+        A.verifprenom_m(ui);
+}
+
+void MainWindow::on_date_m_dateChanged(const QDate &date)
+{
+    agents A;
+        A.verifdate_m(ui);
+}
+
+void MainWindow::on_email_m_cursorPositionChanged(int arg1, int arg2)
+{
+    agents A;
+        A.VerifMail_m(ui);
+}
+
+void MainWindow::on_tel_m_cursorPositionChanged(int arg1, int arg2)
+{
+    agents A;
+        A.verifTel_m(ui);
+}
+//--------verfifaction line profil--------//
+
+void MainWindow::on_ID_0_cursorPositionChanged(int arg1, int arg2)
+{
+    profil p;
+        p.verifID(ui);
+}
+
+void MainWindow::on_nom_profil_0_cursorPositionChanged(int arg1, int arg2)
+{
+    profil p;
+        p.verifnom_profil(ui);
+}
+
+void MainWindow::on_salaire_0_cursorPositionChanged(int arg1, int arg2)
+{
+    profil p;
+        p.verifsalaire(ui);
+}
+
+void MainWindow::on_description_0_cursorPositionChanged(int arg1, int arg2)
+{
+    profil p;
+        p.verifdescription(ui);
+}
+
+void MainWindow::on_nb_0_cursorPositionChanged(int arg1, int arg2)
+{
+    profil p;
+        p.verifnb_agents(ui);
+}
+
+void MainWindow::on_IDp_m_cursorPositionChanged(int arg1, int arg2)
+{
+    profil p;
+        p.verifIDm(ui);
+}
+
+void MainWindow::on_nomp_m_cursorPositionChanged(int arg1, int arg2)
+{
+    profil p;
+        p.verifnom_profilm(ui);
+}
+
+void MainWindow::on_salairep_m_cursorPositionChanged(int arg1, int arg2)
+{
+    profil p;
+        p.verifsalairem(ui);
+}
+
+void MainWindow::on_descriptionp_m_cursorPositionChanged(int arg1, int arg2)
+{
+    profil p;
+        p.verifdescriptionm(ui);
+}
+
+void MainWindow::on_nbagentsp_m_cursorPositionChanged(int arg1, int arg2)
+{
+    profil p;
+        p.verifnb_agentsm(ui);
 }

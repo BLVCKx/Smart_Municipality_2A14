@@ -7,6 +7,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
+#include "QAbstractItemView"
 profil::profil()
 {
 
@@ -113,4 +114,192 @@ bool profil::supprimer_p(Ui::MainWindow *ui)
 
 
 
+}
+
+
+//----------verifaction-----//
+bool profil::verifID(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->ID_0->text().isEmpty() || ui->ID_0->text().length()!=8 || ui->ID_0->text().contains(QRegExp("[^0-9]")))
+    {
+        ui->p1->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->p1->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+bool profil::verifnom_profil(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->nom_profil_0->text().isEmpty()||ui->nom_profil_0->text().contains(QRegExp("[^a-zA-Z]")))
+    {
+        ui->p2->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->p2->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+bool profil::verifsalaire(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->salaire_0->text().isEmpty()|| ui->salaire_0->text().contains(QRegExp("[^0-9]")))
+    {
+        ui->p3->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->p3->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+bool profil::verifdescription(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->description_0->text().isEmpty()||ui->description_0->text().contains(QRegExp("[^a-zA-Z]")))
+    {
+        ui->p4->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->p4->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+bool profil::verifnb_agents(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->nb_0->text().isEmpty() || ui->nb_0->text().length()!=8 || ui->nb_0->text().contains(QRegExp("[^0-9]")))
+    {
+        ui->p5->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->p5->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+
+
+bool profil::verifIDm(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->IDp_m->text().isEmpty() || ui->IDp_m->text().length()!=6 || ui->IDp_m->text().contains(QRegExp("[^0-9]")))
+    {
+        ui->mp1->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->mp1->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+bool profil::verifnom_profilm(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->nomp_m->text().isEmpty()||ui->nomp_m->text().contains(QRegExp("[^a-zA-Z]")))
+    {
+        ui->mp2->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->mp2->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+bool profil::verifsalairem(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->salairep_m->text().isEmpty()|| ui->salairep_m->text().contains(QRegExp("[^0-9]")))
+    {
+        ui->mp3->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->mp3->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+bool profil::verifdescriptionm(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->descriptionp_m->text().isEmpty()||ui->descriptionp_m->text().contains(QRegExp("[^a-zA-Z0-9]")))
+    {
+        ui->mp4->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->mp4->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+bool profil::verifnb_agentsm(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->nbagentsp_m->text().isEmpty()|| ui->nbagentsp_m->text().contains(QRegExp("[^0-9]")))
+    {
+        ui->mp5->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->mp5->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+//-----------selection text---//
+void profil::InitIndication(Ui::MainWindow *ui){
+ui->description_0->setToolTip("La description doit non-vide !");
+ui->descriptionp_m->setToolTip("La description doit non-vide !");
+ui->nom_profil_0->setToolTip("Le nom de profil doit non-vide et seulement composé par des lettres alphabétique !");
+ui->nomp_m->setToolTip("Le nom de profil doit non-vide et seulement composé par des lettres alphabétique !");
+ui->salaire_0->setToolTip("Le salaire (TND) doit être non-vide et seulement composé par  des chifrres!");
+ui->salairep_m->setToolTip("Le salaire (TND) doit être non-vide et seulement composé par  des chifrres !");
+ui->nb_0->setToolTip("Le nombre des agents doit être non-vide et seulement composé par  des chifrres !");
+ui->nbagentsp_m->setToolTip("Le nombre des agents doit être non-vide et seulement composé par  des chifrres !");
+ui->ID_0->setToolTip("Le numéro d'identification (ID) doit être non-vide et seulement composé des chifrres, Exactment six chiffres !");
+ui->IDp_m->setToolTip("Le numéro d'identification (ID) doit être non-vide et seulement composé des chifrres, Exactment six chiffres !");
 }

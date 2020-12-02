@@ -44,6 +44,20 @@ QSqlQueryModel *getModelSpecial(QString inputValue,QString filterChecked);
 QSqlQueryModel *afficher_choix1(QString choix);
 int calculercatego(QString catego);
 void departentss(Ui::MainWindow *ui);
+bool verifCIN(Ui::MainWindow *ui);
+bool verifnom(Ui::MainWindow *ui);
+bool verifprenom(Ui::MainWindow *ui);
+bool VerifMail(Ui::MainWindow *ui);
+bool verifTel(Ui::MainWindow *ui);
+bool verifdate(Ui::MainWindow *ui);
+bool verifCIN_m(Ui::MainWindow *ui);
+bool verifnom_m(Ui::MainWindow *ui);
+bool verifprenom_m(Ui::MainWindow *ui);
+bool VerifMail_m(Ui::MainWindow *ui);
+bool verifTel_m(Ui::MainWindow *ui);
+bool verifdate_m(Ui::MainWindow *ui);
+void InitIndication(Ui::MainWindow *ui);
+
 
     void setIDtoDisplay(int id){
         this->id=id;

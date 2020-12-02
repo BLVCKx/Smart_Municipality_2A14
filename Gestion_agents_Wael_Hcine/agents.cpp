@@ -8,7 +8,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
-
+#include <QPixmap>
 #include <QMainWindow>
 #include<QtCharts/QChartView>
 #include<QtCharts/QBarSeries>
@@ -18,6 +18,7 @@
 #include<QtCharts/QHorizontalStackedBarSeries>
 #include<QtCharts/QLineSeries>
 #include<QtCharts/QCategoryAxis>
+#include "QAbstractItemView"
 agents::agents()
 {
 
@@ -283,3 +284,256 @@ void agents::departentss(Ui::MainWindow *ui)
     ui->comboBox_2->setModel(modal);
 
 }
+
+//--------Verifacation-----//
+bool agents::verifCIN(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->CIN_1->text().isEmpty() || ui->CIN_1->text().length()!=8 || ui->CIN_1->text().contains(QRegExp("[^0-9]")))
+    {
+        ui->a1->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->a1->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+
+bool agents::verifnom(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->nom_1->text().isEmpty()||ui->nom_1->text().contains(QRegExp("[^a-zA-Z]")))
+    {
+        ui->a2->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->a2->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+
+bool agents::verifprenom(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->prenom_0->text().isEmpty()||ui->prenom_0->text().contains(QRegExp("[^a-zA-Z]")))
+    {
+        ui->a3->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->a3->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+bool agents::VerifMail(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+    if (ui->email_0->text().isEmpty() || (ui->email_0->text().lastIndexOf("@",-1)>ui->email_0->text().lastIndexOf(".",-1)) || ui->email_0->text().lastIndexOf("@",-1)==-1 || ui->email_0->text().lastIndexOf("@",-1)==-1)
+    {
+        ui->a4->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->a4->setPixmap(PixTrueIcon);
+        return true;
+
+
+    }
+}
+bool agents::verifTel(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->tel_0->text().isEmpty() || ui->tel_0->text().length()!=8 || ui->tel_0->text().contains(QRegExp("[^0-9]")))
+    {
+        ui->a5->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->a5->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+
+bool agents::verifdate(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->date_0->date()==QDate::fromString("01/01/1800","dd/MM/yyyy"))
+    {
+        ui->a6->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->a6->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+
+//---------verfication del modification--------//
+
+bool agents::verifCIN_m(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->CIN_m->text().isEmpty() || ui->CIN_m->text().length()!=8 || ui->CIN_m->text().contains(QRegExp("[^0-9]")))
+    {
+        ui->m1->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->m1->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+
+bool agents::verifnom_m(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->nom_m->text().isEmpty()||ui->nom_m->text().contains(QRegExp("[^a-zA-Z]")))
+    {
+        ui->m2->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->m2->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+
+bool agents::verifprenom_m(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->prenom_m->text().isEmpty()||ui->prenom_m->text().contains(QRegExp("[^a-zA-Z]")))
+    {
+        ui->m3->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->m3->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+bool agents::VerifMail_m(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+    if (ui->email_m->text().isEmpty() || (ui->email_m->text().lastIndexOf("@",-1)>ui->email_m->text().lastIndexOf(".",-1)) || ui->email_m->text().lastIndexOf("@",-1)==-1 || ui->email_m->text().lastIndexOf("@",-1)==-1)
+    {
+        ui->m5->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->m5->setPixmap(PixTrueIcon);
+
+
+    }
+}
+bool agents::verifTel_m(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->tel_m->text().isEmpty() || ui->tel_m->text().length()!=8 || ui->tel_m->text().contains(QRegExp("[^0-9]")))
+    {
+        ui->m6->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->m6->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+
+bool agents::verifdate_m(Ui::MainWindow *ui){
+    QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
+   QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
+
+    if (ui->date_m->date()==QDate::fromString("01/01/1800","dd/MM/yyyy"))
+    {
+        ui->m4->setPixmap(PixFalseIcon);
+        return false;
+
+    }
+    else
+    {
+        ui->m4->setPixmap(PixTrueIcon);
+        return true;
+
+    }
+}
+//-----------selection text---//
+void agents::InitIndication(Ui::MainWindow *ui){
+ui->nom_1->setToolTip("Le nom de l'employé doit non-vide et seulement composé par des lettres alphabétique !");
+ui->nom_m->setToolTip("Le nom de l'employé doit non-vide et seulement composé par des lettres alphabétique !");
+ui->prenom_0->setToolTip("Le nom de l'employé doit non-vide et seulement composé par des lettres alphabétique !");
+ui->prenom_m->setToolTip("Le nom de l'employé doit non-vide et seulement composé par des lettres alphabétique !");
+ui->email_0->setToolTip("Le mail doit être non-vide, comporte le caractére '@' et '.' et le @ doit être positionné avant le '.'");
+ui->email_m->setToolTip("Le mail doit être non-vide, comporte le caractére '@' et '.' et le @ doit être positionné avant le '.'");
+ui->CIN_1->setToolTip("Le numéro de carte d'identité (CIN) doit être non-vide et seulement composé par  des chifrres, Exactment huit chiffres !");
+ui->CIN_m->setToolTip("Le numéro de carte d'identité (CIN) doit être non-vide et seulement composé par  des chifrres, Exactment huit chiffres !");
+ui->tel_0->setToolTip("Le numéro de téléphone (Tel) doit être non-vide et seulement composé par  des chifrres, Exactment huit chiffres !");
+ui->tel_m->setToolTip("Le numéro de téléphone (Tel) doit être non-vide et seulement composé par  des chifrres, Exactment huit chiffres !");
+ui->date_0->setToolTip("La date de naissance doit être changé !");
+ui->date_m->setToolTip("La date de naissance doit être changé !");
+ui->comboBox->setToolTip("Un profil doit être choisi !");
+ui->comboBox_2->setToolTip("Un profil doit être choisi !");
+}
+/*bool agents::supprimer3(Ui::MainWindow *ui)
+{
+    QString ref=ui->tab_agents->model()->data(ui->tab_agents->model()->index(ui->tab_agents->selectionModel()->currentIndex().row(),0)).toString();
+
+    QSqlQuery query;
+    query.prepare("select * FROM agents WHERE CIN ='"+ref+"'");
+    query.exec();
+    int total=0;
+    while(query.next()){
+        total++;
+    }
+    if(total==1){
+        QSqlQuery q;
+        q.prepare("DELETE FROM agents WHERE CIN ='"+ref+"'");
+        return q.exec();
+    }
+    else{
+        return false;
+    }
+
+
+}*/

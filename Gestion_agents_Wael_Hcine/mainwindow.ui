@@ -1511,7 +1511,7 @@ QPushButton:pressed {
                    <string notr="true">background: transparent;</string>
                   </property>
                   <property name="currentIndex">
-                   <number>2</number>
+                   <number>3</number>
                   </property>
                   <widget class="QWidget" name="page_home">
                    <widget class="QLabel" name="label">
@@ -1601,7 +1601,7 @@ QTabBar::tab:!selected {
                      <enum>QTabWidget::Rounded</enum>
                     </property>
                     <property name="currentIndex">
-                     <number>0</number>
+                     <number>1</number>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1953,6 +1953,84 @@ QDateEdit:focus {
 }</string>
                        </property>
                       </widget>
+                      <widget class="QLabel" name="a1">
+                       <property name="geometry">
+                        <rect>
+                         <x>530</x>
+                         <y>80</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="a2">
+                       <property name="geometry">
+                        <rect>
+                         <x>530</x>
+                         <y>120</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="a3">
+                       <property name="geometry">
+                        <rect>
+                         <x>530</x>
+                         <y>160</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="a4">
+                       <property name="geometry">
+                        <rect>
+                         <x>530</x>
+                         <y>240</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="a5">
+                       <property name="geometry">
+                        <rect>
+                         <x>530</x>
+                         <y>280</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="a6">
+                       <property name="geometry">
+                        <rect>
+                         <x>530</x>
+                         <y>200</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
                      </widget>
                      <zorder>frame</zorder>
                      <zorder>label_2</zorder>
@@ -2069,9 +2147,7 @@ QDateEdit:focus {
                         </rect>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">
-QLineEdit {
-	color: rgb(44, 49, 60);
+                        <string notr="true">QLineEdit {
 	background-color: rgb(27, 29, 35);
 	border-radius: 5px;
 	border: 2px solid rgb(27, 29, 35);
@@ -2082,8 +2158,6 @@ QLineEdit:hover {
 }
 QLineEdit:focus {
 	border: 2px solid rgb(91, 101, 124);
-}QLabel
-{color: rgb(255, 255, 255);
 }</string>
                        </property>
                       </widget>
@@ -2097,9 +2171,7 @@ QLineEdit:focus {
                         </rect>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">
-QLineEdit {
-	color: rgb(44, 49, 60);
+                        <string notr="true">QLineEdit {
 	background-color: rgb(27, 29, 35);
 	border-radius: 5px;
 	border: 2px solid rgb(27, 29, 35);
@@ -2110,8 +2182,6 @@ QLineEdit:hover {
 }
 QLineEdit:focus {
 	border: 2px solid rgb(91, 101, 124);
-}QLabel
-{color: rgb(255, 255, 255);
 }</string>
                        </property>
                       </widget>
@@ -2125,9 +2195,7 @@ QLineEdit:focus {
                         </rect>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">
-QLineEdit {
-	color: rgb(44, 49, 60);
+                        <string notr="true">QLineEdit {
 	background-color: rgb(27, 29, 35);
 	border-radius: 5px;
 	border: 2px solid rgb(27, 29, 35);
@@ -2138,8 +2206,6 @@ QLineEdit:hover {
 }
 QLineEdit:focus {
 	border: 2px solid rgb(91, 101, 124);
-}QLabel
-{color: rgb(255, 255, 255);
 }</string>
                        </property>
                       </widget>
@@ -2153,9 +2219,7 @@ QLineEdit:focus {
                         </rect>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">
-QLineEdit {
-	color: rgb(44, 49, 60);
+                        <string notr="true">QLineEdit {
 	background-color: rgb(27, 29, 35);
 	border-radius: 5px;
 	border: 2px solid rgb(27, 29, 35);
@@ -2166,8 +2230,6 @@ QLineEdit:hover {
 }
 QLineEdit:focus {
 	border: 2px solid rgb(91, 101, 124);
-}QLabel
-{color: rgb(255, 255, 255);
 }</string>
                        </property>
                       </widget>
@@ -2181,9 +2243,7 @@ QLineEdit:focus {
                         </rect>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">
-QLineEdit {
-	color: rgb(44, 49, 60);
+                        <string notr="true">QLineEdit {
 	background-color: rgb(27, 29, 35);
 	border-radius: 5px;
 	border: 2px solid rgb(27, 29, 35);
@@ -2194,8 +2254,6 @@ QLineEdit:hover {
 }
 QLineEdit:focus {
 	border: 2px solid rgb(91, 101, 124);
-}QLabel
-{color: rgb(255, 255, 255);
 }</string>
                        </property>
                       </widget>
@@ -2227,6 +2285,71 @@ QPushButton:pressed {
                        </property>
                        <property name="text">
                         <string>Ajouter</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="p1">
+                       <property name="geometry">
+                        <rect>
+                         <x>600</x>
+                         <y>120</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="p2">
+                       <property name="geometry">
+                        <rect>
+                         <x>600</x>
+                         <y>160</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="p3">
+                       <property name="geometry">
+                        <rect>
+                         <x>600</x>
+                         <y>200</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="p4">
+                       <property name="geometry">
+                        <rect>
+                         <x>600</x>
+                         <y>240</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="p5">
+                       <property name="geometry">
+                        <rect>
+                         <x>600</x>
+                         <y>280</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
                        </property>
                       </widget>
                      </widget>
@@ -2293,7 +2416,7 @@ QTabBar::tab:!selected {
 }</string>
                     </property>
                     <property name="currentIndex">
-                     <number>1</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="tab">
                      <attribute name="title">
@@ -3025,7 +3148,7 @@ QTabBar::tab:!selected {
 </string>
                     </property>
                     <property name="currentIndex">
-                     <number>0</number>
+                     <number>1</number>
                     </property>
                     <widget class="QWidget" name="tab_3">
                      <attribute name="title">
@@ -3365,6 +3488,84 @@ QDateEdit:focus {
 }</string>
                        </property>
                       </widget>
+                      <widget class="QLabel" name="m1">
+                       <property name="geometry">
+                        <rect>
+                         <x>570</x>
+                         <y>100</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="m2">
+                       <property name="geometry">
+                        <rect>
+                         <x>570</x>
+                         <y>140</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="m3">
+                       <property name="geometry">
+                        <rect>
+                         <x>570</x>
+                         <y>180</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="m4">
+                       <property name="geometry">
+                        <rect>
+                         <x>560</x>
+                         <y>220</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="m5">
+                       <property name="geometry">
+                        <rect>
+                         <x>570</x>
+                         <y>260</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="m6">
+                       <property name="geometry">
+                        <rect>
+                         <x>570</x>
+                         <y>300</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
                      </widget>
                     </widget>
                     <widget class="QWidget" name="tab_4">
@@ -3399,9 +3600,7 @@ QDateEdit:focus {
                         </rect>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">
-QLineEdit {
-	color: rgb(44, 49, 60);
+                        <string notr="true">QLineEdit {
 	background-color: rgb(27, 29, 35);
 	border-radius: 5px;
 	border: 2px solid rgb(27, 29, 35);
@@ -3412,8 +3611,6 @@ QLineEdit:hover {
 }
 QLineEdit:focus {
 	border: 2px solid rgb(91, 101, 124);
-}QLabel
-{color: rgb(255, 255, 255);
 }</string>
                        </property>
                       </widget>
@@ -3427,9 +3624,7 @@ QLineEdit:focus {
                         </rect>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">
-QLineEdit {
-	color: rgb(44, 49, 60);
+                        <string notr="true">QLineEdit {
 	background-color: rgb(27, 29, 35);
 	border-radius: 5px;
 	border: 2px solid rgb(27, 29, 35);
@@ -3440,8 +3635,6 @@ QLineEdit:hover {
 }
 QLineEdit:focus {
 	border: 2px solid rgb(91, 101, 124);
-}QLabel
-{color: rgb(255, 255, 255);
 }</string>
                        </property>
                       </widget>
@@ -3468,9 +3661,7 @@ QLineEdit:focus {
                         </rect>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">
-QLineEdit {
-	color: rgb(44, 49, 60);
+                        <string notr="true">QLineEdit {
 	background-color: rgb(27, 29, 35);
 	border-radius: 5px;
 	border: 2px solid rgb(27, 29, 35);
@@ -3481,8 +3672,6 @@ QLineEdit:hover {
 }
 QLineEdit:focus {
 	border: 2px solid rgb(91, 101, 124);
-}QLabel
-{color: rgb(255, 255, 255);
 }</string>
                        </property>
                       </widget>
@@ -3526,9 +3715,7 @@ QPushButton:pressed {
                         </rect>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">
-QLineEdit {
-	color: rgb(44, 49, 60);
+                        <string notr="true">QLineEdit {
 	background-color: rgb(27, 29, 35);
 	border-radius: 5px;
 	border: 2px solid rgb(27, 29, 35);
@@ -3539,8 +3726,6 @@ QLineEdit:hover {
 }
 QLineEdit:focus {
 	border: 2px solid rgb(91, 101, 124);
-}QLabel
-{color: rgb(255, 255, 255);
 }</string>
                        </property>
                       </widget>
@@ -3554,9 +3739,7 @@ QLineEdit:focus {
                         </rect>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">
-QLineEdit {
-	color: rgb(44, 49, 60);
+                        <string notr="true">QLineEdit {
 	background-color: rgb(27, 29, 35);
 	border-radius: 5px;
 	border: 2px solid rgb(27, 29, 35);
@@ -3567,8 +3750,6 @@ QLineEdit:hover {
 }
 QLineEdit:focus {
 	border: 2px solid rgb(91, 101, 124);
-}QLabel
-{color: rgb(255, 255, 255);
 }</string>
                        </property>
                       </widget>
@@ -3622,6 +3803,71 @@ QLineEdit:focus {
                        </property>
                        <property name="text">
                         <string>Nombre des agents</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="mp1">
+                       <property name="geometry">
+                        <rect>
+                         <x>540</x>
+                         <y>190</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="mp2">
+                       <property name="geometry">
+                        <rect>
+                         <x>540</x>
+                         <y>230</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="mp3">
+                       <property name="geometry">
+                        <rect>
+                         <x>540</x>
+                         <y>270</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="mp4">
+                       <property name="geometry">
+                        <rect>
+                         <x>540</x>
+                         <y>310</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="mp5">
+                       <property name="geometry">
+                        <rect>
+                         <x>540</x>
+                         <y>350</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
                        </property>
                       </widget>
                      </widget>
