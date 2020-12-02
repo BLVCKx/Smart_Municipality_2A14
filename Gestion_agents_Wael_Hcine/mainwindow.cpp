@@ -39,6 +39,7 @@
 #include"profil.h"
 #include "statistiques.h"
 #include "ui_statistiques.h"
+#include<QMediaPlayer>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -59,6 +60,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_home_clicked()
 {
+
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/JoKerTn/Desktop/Gestion_agents_Wael_Hcine/Gestion_agents_Wael_Hcine/clic.wav"));
+   if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
     ui->stackedWidget->setCurrentIndex(0);
     agents A;
      A.afficher1(ui);
@@ -68,7 +77,9 @@ void MainWindow::on_home_clicked()
      P.afficher_P(ui);//----------afficher-----//
      P.InitIndication(ui);
      ui->modifier->hide();
-     ui->Statistque->hide(); 
+     ui->Statistque->hide();
+
+     }
 }
 
 void MainWindow::on_ajouter_2_clicked()
@@ -79,11 +90,18 @@ void MainWindow::on_ajouter_2_clicked()
     agents A;
      A.afficher1(ui);
      A.departentss(ui);
-
      profil P;
      P.afficher_P(ui);
      P.InitIndication(ui);
      A.InitIndication(ui);
+     QMediaPlayer * bulletsound = new QMediaPlayer();
+     bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/JoKerTn/Desktop/Gestion_agents_Wael_Hcine/Gestion_agents_Wael_Hcine/clic.wav"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+         bulletsound->setPosition(0);
+     }
+     else if (bulletsound->state() == QMediaPlayer::StoppedState){
+         bulletsound->play();
+     }
    }
 
 void MainWindow::on_afficher_2_clicked()
@@ -99,6 +117,14 @@ void MainWindow::on_afficher_2_clicked()
      A.InitIndication(ui);
      ui->modifier->hide();
      ui->Statistque->hide();
+     QMediaPlayer * bulletsound = new QMediaPlayer();
+     bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/JoKerTn/Desktop/Gestion_agents_Wael_Hcine/Gestion_agents_Wael_Hcine/clic.wav"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+         bulletsound->setPosition(0);
+     }
+     else if (bulletsound->state() == QMediaPlayer::StoppedState){
+         bulletsound->play();
+     }
 }
 
 void MainWindow::on_modifier_clicked()
@@ -256,6 +282,14 @@ void MainWindow::on_pushButton_15_clicked()
      A.departentss(ui);
      profil P;
      P.afficher_P(ui);
+     QMediaPlayer * bulletsound = new QMediaPlayer();
+     bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/JoKerTn/Desktop/Gestion_agents_Wael_Hcine/Gestion_agents_Wael_Hcine/clic.wav"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+         bulletsound->setPosition(0);
+     }
+     else if (bulletsound->state() == QMediaPlayer::StoppedState){
+         bulletsound->play();
+     }
 }
 //----------imprimer-------//
 void MainWindow::on_pushButton_10_clicked()
@@ -272,6 +306,14 @@ void MainWindow::on_pushButton_10_clicked()
     if(dialog.exec()==QDialog::Rejected)
 
         return;
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/JoKerTn/Desktop/Gestion_agents_Wael_Hcine/Gestion_agents_Wael_Hcine/clic.wav"));
+   if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
 }
 //----------pdf---------//
 void MainWindow::on_pushButton_14_clicked()
@@ -327,6 +369,14 @@ void MainWindow::on_pushButton_14_clicked()
              doc.setHtml(strStream);
              doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
              doc.print(&printer);
+             QMediaPlayer * bulletsound = new QMediaPlayer();
+             bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/JoKerTn/Desktop/Gestion_agents_Wael_Hcine/Gestion_agents_Wael_Hcine/clic.wav"));
+            if (bulletsound->state() == QMediaPlayer::PlayingState){
+                 bulletsound->setPosition(0);
+             }
+             else if (bulletsound->state() == QMediaPlayer::StoppedState){
+                 bulletsound->play();
+             }
 
     }
 
@@ -420,6 +470,14 @@ void MainWindow::on_imprimer_clicked()
   QPrintDialog dialog(&printer,this);
 
     if(dialog.exec()==QDialog::Rejected);
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/JoKerTn/Desktop/Gestion_agents_Wael_Hcine/Gestion_agents_Wael_Hcine/clic.wav"));
+   if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
 }
 //------pdf profil-----//
 void MainWindow::on_pdf_clicked()
@@ -474,6 +532,14 @@ void MainWindow::on_pdf_clicked()
              doc.setHtml(strStream);
              doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
              doc.print(&printer);
+             QMediaPlayer * bulletsound = new QMediaPlayer();
+             bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/JoKerTn/Desktop/Gestion_agents_Wael_Hcine/Gestion_agents_Wael_Hcine/clic.wav"));
+            if (bulletsound->state() == QMediaPlayer::PlayingState){
+                 bulletsound->setPosition(0);
+             }
+             else if (bulletsound->state() == QMediaPlayer::StoppedState){
+                 bulletsound->play();
+             }
 }
 //------actualiser profil-----//
 void MainWindow::on_actualiser_clicked()
@@ -484,6 +550,14 @@ void MainWindow::on_actualiser_clicked()
      A.departentss(ui);
      profil P;
      P.afficher_P(ui);
+     QMediaPlayer * bulletsound = new QMediaPlayer();
+     bulletsound->setMedia(QUrl::fromLocalFile("C:/Users/JoKerTn/Desktop/Gestion_agents_Wael_Hcine/Gestion_agents_Wael_Hcine/clic.wav"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+         bulletsound->setPosition(0);
+     }
+     else if (bulletsound->state() == QMediaPlayer::StoppedState){
+         bulletsound->play();
+     }
 }
 //------modifier profil-----//
 void MainWindow::on_tab_profil_activated(const QModelIndex &index)
@@ -537,7 +611,7 @@ void MainWindow::on_pushButton_21_clicked()
 
         }
         else {
-            QMessageBox ::information(this,"","erreur")  ;
+            QMessageBox ::information(this,"","erreur");
         }
 }
 
