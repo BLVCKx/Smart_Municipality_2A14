@@ -114,7 +114,7 @@ model->setHeaderData(4, Qt::Horizontal, QObject::tr("email"));
 model->setHeaderData(5, Qt::Horizontal, QObject::tr("tel"));
 return model;
 }*/
-/*agents agents::Rechercheragents(QString nom1)//--------------ajouter------//
+/*agents agents::Rechercheragents(QString nom1)
 {
 agents agentsAConsulter;
 QSqlQuery query;
@@ -326,7 +326,7 @@ bool agents::verifprenom(Ui::MainWindow *ui){
     QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
    QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
 
-    if (ui->prenom_0->text().isEmpty()||ui->prenom_0->text().contains(QRegExp("[a-zA-Z]$")))
+    if (ui->prenom_0->text().isEmpty()||ui->prenom_0->text().contains(QRegExp("[^a-zA-Z]")))
     {
         ui->a3->setPixmap(PixFalseIcon);
         return false;
@@ -535,6 +535,5 @@ bool agents::supprimer3(Ui::MainWindow *ui)
     else{
         return false;
     }
-
-
 }
+//--------------------------//
