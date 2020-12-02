@@ -129,7 +129,7 @@ void MainWindow::on_ajouter_0_clicked()
   agents A(QString CIN,QString nom,QString prenom,QDate Date_naissance,QString email,QString tel,QString nom_profil);
   agents A1;
    bool test=A1.ajouter(CIN,nom,prenom,Date_naissance,email,tel,nom_profil);
-  if(test && A1.verifCIN(ui) && A1.verifnom(ui)&&A1.verifprenom(ui)&& A1.VerifMail(ui)&&A1.verifTel(ui)&&A1.verifdate(ui))
+  if(test && A1.verifCIN(ui) && A1.verifnom(ui)&&A1.verifprenom(ui)&& A1.VerifMail(ui)&&A1.verifTel(ui))
 {
 QMessageBox::information(nullptr, QObject::tr("Ajouter un employe"),
                   QObject::tr("employe ajouté.\n"
@@ -189,7 +189,7 @@ void MainWindow::on_pushButton_13_clicked()
 
     agents e;
 
-        if(e.supprimer1(ui))
+        if(e.supprimer3(ui))
         {
             QMessageBox ::information(this,"","Employe Supprimé")  ;
 
@@ -235,19 +235,18 @@ void MainWindow::on_tab_agents_activated(const QModelIndex &index)
 void MainWindow::on_pushButton_12_clicked()
 {
     agents e;
-
-        if(e.modifier1(ui)&& e.verifCIN_m(ui) && e.verifnom_m(ui)&&e.verifprenom_m(ui)&&e.VerifMail_m(ui)&&e.verifTel_m(ui)&&e.verifdate_m(ui))
+       e.modifier1(ui);
+        if(e.modifier1(ui))
         {
             QMessageBox ::information(this,"","Employe modifiee")  ;
 
              e.afficher1(ui);
              e.departentss(ui);
              profil P;
-             P.afficher_P(ui);
-
-        }
-         ui->stackedWidget->setCurrentIndex(2);//retour afficher
-          ui->modifier->hide();
+             P.afficher_P(ui); 
+         }
+        ui->stackedWidget->setCurrentIndex(2);//retour afficher
+         ui->modifier->hide();
 }
 //----------actualiser-----//
 void MainWindow::on_pushButton_15_clicked()
@@ -530,7 +529,7 @@ void MainWindow::on_pushButton_21_clicked()
 {
     profil P;
 
-        if(P.supprimer_p(ui))
+        if(P.supprimer33(ui))
         {
             QMessageBox ::information(this,"","Employe Supprimé")  ;
 

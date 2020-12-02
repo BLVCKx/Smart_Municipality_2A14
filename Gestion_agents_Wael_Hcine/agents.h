@@ -57,6 +57,7 @@ bool VerifMail_m(Ui::MainWindow *ui);
 bool verifTel_m(Ui::MainWindow *ui);
 bool verifdate_m(Ui::MainWindow *ui);
 void InitIndication(Ui::MainWindow *ui);
+bool supprimer3(Ui::MainWindow *ui);
 
 
     void setIDtoDisplay(int id){

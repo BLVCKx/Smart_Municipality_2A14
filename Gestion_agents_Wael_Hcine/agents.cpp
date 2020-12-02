@@ -515,7 +515,7 @@ ui->date_m->setToolTip("La date de naissance doit être changé !");
 ui->comboBox->setToolTip("Un profil doit être choisi !");
 ui->comboBox_2->setToolTip("Un profil doit être choisi !");
 }
-/*bool agents::supprimer3(Ui::MainWindow *ui)
+bool agents::supprimer3(Ui::MainWindow *ui)
 {
     QString ref=ui->tab_agents->model()->data(ui->tab_agents->model()->index(ui->tab_agents->selectionModel()->currentIndex().row(),0)).toString();
 
@@ -536,4 +536,4 @@ ui->comboBox_2->setToolTip("Un profil doit être choisi !");
     }
 
 
-}*/
+}

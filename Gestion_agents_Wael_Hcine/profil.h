@@ -44,5 +44,6 @@ public:
     bool verifdescriptionm(Ui::MainWindow *ui);
     bool verifnb_agentsm(Ui::MainWindow *ui);
     void InitIndication(Ui::MainWindow *ui);
+    bool supprimer33(Ui::MainWindow *ui);
 };
 #endif // PROFIL_H

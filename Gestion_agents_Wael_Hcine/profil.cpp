@@ -122,7 +122,7 @@ bool profil::verifID(Ui::MainWindow *ui){
     QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
    QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
 
-    if (ui->ID_0->text().isEmpty() || ui->ID_0->text().length()!=8 || ui->ID_0->text().contains(QRegExp("[^0-9]")))
+    if (ui->ID_0->text().isEmpty() || ui->ID_0->text().length()!=6 || ui->ID_0->text().contains(QRegExp("[^0-9]")))
     {
         ui->p1->setPixmap(PixFalseIcon);
         return false;
@@ -190,7 +190,7 @@ bool profil::verifnb_agents(Ui::MainWindow *ui){
     QPixmap PixTrueIcon=QPixmap(":/16x16/icons/16x16/cil-check-circle.png");
    QPixmap PixFalseIcon=QPixmap(":/16x16/icons/16x16/cil-x-circle.png");
 
-    if (ui->nb_0->text().isEmpty() || ui->nb_0->text().length()!=8 || ui->nb_0->text().contains(QRegExp("[^0-9]")))
+    if (ui->nb_0->text().isEmpty() || ui->nb_0->text().contains(QRegExp("[^0-9]")))
     {
         ui->p5->setPixmap(PixFalseIcon);
         return false;
@@ -302,4 +302,26 @@ ui->nb_0->setToolTip("Le nombre des agents doit être non-vide et seulement comp
 ui->nbagentsp_m->setToolTip("Le nombre des agents doit être non-vide et seulement composé par  des chifrres !");
 ui->ID_0->setToolTip("Le numéro d'identification (ID) doit être non-vide et seulement composé des chifrres, Exactment six chiffres !");
 ui->IDp_m->setToolTip("Le numéro d'identification (ID) doit être non-vide et seulement composé des chifrres, Exactment six chiffres !");
+}
+bool profil::supprimer33(Ui::MainWindow *ui)
+{
+    QString ref=ui->tab_profil->model()->data(ui->tab_profil->model()->index(ui->tab_profil->selectionModel()->currentIndex().row(),0)).toString();
+
+    QSqlQuery query;
+    query.prepare("select * FROM profil WHERE ID ='"+ref+"'");
+    query.exec();
+    int total=0;
+    while(query.next()){
+        total++;
+    }
+    if(total==1){
+        QSqlQuery q;
+        q.prepare("DELETE FROM profil WHERE ID ='"+ref+"'");
+        return q.exec();
+    }
+    else{
+        return false;
+    }
+
+
 }

@@ -1511,7 +1511,7 @@ QPushButton:pressed {
                    <string notr="true">background: transparent;</string>
                   </property>
                   <property name="currentIndex">
-                   <number>3</number>
+                   <number>1</number>
                   </property>
                   <widget class="QWidget" name="page_home">
                    <widget class="QLabel" name="label">
@@ -1601,7 +1601,7 @@ QTabBar::tab:!selected {
                      <enum>QTabWidget::Rounded</enum>
                     </property>
                     <property name="currentIndex">
-                     <number>1</number>
+                     <number>0</number>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1901,6 +1901,9 @@ QComboBox QAbstractItemView {
 QPushButton:hover {
 	background-color: rgb(57, 65, 80);
 	border: 2px solid rgb(61, 70, 86);
+	background-image: url(:/16x16/icons/16x16/cil-library-add.png);
+	background-position: right center;
+    background-repeat: no-repeat;
 }
 QPushButton:pressed {	
 	background-color: rgb(35, 40, 49);
@@ -2262,7 +2265,7 @@ QLineEdit:focus {
                         <rect>
                          <x>490</x>
                          <y>420</y>
-                         <width>191</width>
+                         <width>221</width>
                          <height>23</height>
                         </rect>
                        </property>
@@ -2277,6 +2280,9 @@ QLineEdit:focus {
 QPushButton:hover {
 	background-color: rgb(57, 65, 80);
 	border: 2px solid rgb(61, 70, 86);
+	background-image: url(:/16x16/icons/16x16/cil-library-add.png);
+	background-position: right center;
+    background-repeat: no-repeat;
 }
 QPushButton:pressed {	
 	background-color: rgb(35, 40, 49);
@@ -2416,7 +2422,7 @@ QTabBar::tab:!selected {
 }</string>
                     </property>
                     <property name="currentIndex">
-                     <number>0</number>
+                     <number>1</number>
                     </property>
                     <widget class="QWidget" name="tab">
                      <attribute name="title">
@@ -2516,9 +2522,9 @@ QPushButton:pressed {
                       <widget class="QPushButton" name="pushButton_13">
                        <property name="geometry">
                         <rect>
-                         <x>780</x>
+                         <x>770</x>
                          <y>82</y>
-                         <width>91</width>
+                         <width>101</width>
                          <height>31</height>
                         </rect>
                        </property>
@@ -2533,6 +2539,9 @@ QPushButton:pressed {
 QPushButton:hover {
 	background-color: rgb(57, 65, 80);
 	border: 2px solid rgb(61, 70, 86);
+	background-image: url(:/20x20/icons/20x20/cil-trash.png);
+	background-position: right center;
+    background-repeat: no-repeat;
 }
 QPushButton:pressed {	
 	background-color: rgb(35, 40, 49);
@@ -2548,7 +2557,7 @@ QPushButton:pressed {
                         <rect>
                          <x>240</x>
                          <y>82</y>
-                         <width>75</width>
+                         <width>101</width>
                          <height>31</height>
                         </rect>
                        </property>
@@ -2563,6 +2572,10 @@ QPushButton:pressed {
 QPushButton:hover {
 	background-color: rgb(57, 65, 80);
 	border: 2px solid rgb(61, 70, 86);
+	
+	background-image: url(:/16x16/icons/16x16/cil-loop-circular.png);
+	background-position: right center;
+    background-repeat: no-repeat;
 }
 QPushButton:pressed {	
 	background-color: rgb(35, 40, 49);
@@ -2744,7 +2757,7 @@ QComboBox QAbstractItemView {
                       <widget class="QPushButton" name="pushButton_20">
                        <property name="geometry">
                         <rect>
-                         <x>360</x>
+                         <x>350</x>
                          <y>530</y>
                          <width>201</width>
                          <height>20</height>
@@ -2841,9 +2854,9 @@ QLabel
                       <widget class="QPushButton" name="pushButton_21">
                        <property name="geometry">
                         <rect>
-                         <x>430</x>
+                         <x>490</x>
                          <y>80</y>
-                         <width>91</width>
+                         <width>101</width>
                          <height>31</height>
                         </rect>
                        </property>
@@ -2858,6 +2871,9 @@ QLabel
 QPushButton:hover {
 	background-color: rgb(57, 65, 80);
 	border: 2px solid rgb(61, 70, 86);
+background-image: url(:/20x20/icons/20x20/cil-trash.png);
+	background-position: right center;
+    background-repeat: no-repeat;
 }
 QPushButton:pressed {	
 	background-color: rgb(35, 40, 49);
@@ -2873,7 +2889,7 @@ QPushButton:pressed {
                         <rect>
                          <x>10</x>
                          <y>120</y>
-                         <width>631</width>
+                         <width>701</width>
                          <height>321</height>
                         </rect>
                        </property>
@@ -2936,7 +2952,7 @@ QScrollBar:horizontal {
                       <widget class="QComboBox" name="comboBox_4">
                        <property name="geometry">
                         <rect>
-                         <x>540</x>
+                         <x>610</x>
                          <y>80</y>
                          <width>101</width>
                          <height>31</height>
@@ -3059,7 +3075,7 @@ QPushButton:pressed {
                         <rect>
                          <x>240</x>
                          <y>80</y>
-                         <width>91</width>
+                         <width>101</width>
                          <height>31</height>
                         </rect>
                        </property>
@@ -3074,6 +3090,9 @@ QPushButton:pressed {
 QPushButton:hover {
 	background-color: rgb(57, 65, 80);
 	border: 2px solid rgb(61, 70, 86);
+background-image: url(:/16x16/icons/16x16/cil-loop-circular.png);
+	background-position: right center;
+    background-repeat: no-repeat;
 }
 QPushButton:pressed {	
 	background-color: rgb(35, 40, 49);
@@ -3278,6 +3297,9 @@ QLineEdit:focus {
 QPushButton:hover {
 	background-color: rgb(57, 65, 80);
 	border: 2px solid rgb(61, 70, 86);
+	background-image: url(:/16x16/icons/16x16/cil-equalizer.png);
+	background-position: right center;
+    background-repeat: no-repeat;
 }
 QPushButton:pressed {	
 	background-color: rgb(35, 40, 49);
@@ -3695,6 +3717,9 @@ QLineEdit:focus {
 QPushButton:hover {
 	background-color: rgb(57, 65, 80);
 	border: 2px solid rgb(61, 70, 86);
+	background-image: url(:/16x16/icons/16x16/cil-equalizer.png);
+	background-position: right center;
+    background-repeat: no-repeat;
 }
 QPushButton:pressed {	
 	background-color: rgb(35, 40, 49);
